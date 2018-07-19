@@ -7,7 +7,6 @@ class App extends React.Component {
     this.state = {
       squares: Array(9).fill(null),
       turn : 'A',
-      winner:""
     }
   }
   componentDidUpdate() {
@@ -24,55 +23,26 @@ class App extends React.Component {
     let third = this.state.squares.slice(6,9);
     if(first.join('') === "AAA" || second.join('') === "AAA" || third.join('') === "AAA") {
       alert("A win!!");
-    //  this.reStart();
     } else if(first.join('') === "BBB" || second.join('') === "BBB" || third.join('') === "BBB") {
       alert("B win!");
-     // this.reStart();
     }
   }
   reStart() {
-    console.log('hi')
-
-    /*
-    let promise1 = new Promise((resolve, reject) =>{
-      resolve(this.setState({squares:Array(9).fill(null)}));
-    });
-
-    promise1.then(() => {
-      for(let i = 0; i < this.state.squares.length;i++) {
-        console.log(this.state.squares[i])
-        console.log('hi')
-        this.setState({turn:''});
-        console.log(this.state.turn)
-        this.renderSquare(i)
-      }
-      // expected output: "Success!"
-
-    });
-*/
     this.setState({squares:Array(9).fill(null)});
     this.setState({turn:"A"});
 
     for(let i = 0; i < this.state.squares.length;i++) {
-      console.log(this.state.squares[i])
       this.renderSquare(i)
     }
-
   }
-  /*
-  012
-  345
-  678
-  */
+
   checkWinnerVertically() {
     let first = [this.state.squares[0],this.state.squares[4],this.state.squares[8]];
     let second = [this.state.squares[2],this.state.squares[4],this.state.squares[6]];
     if(first.join('') === "AAA" || second.join('') === "AAA") {
       alert("A win!!");
-    //  this.reStart();
     } else if(first.join('') === "BBB" || second.join('') === "BBB") {
       alert("B win!");
-    //  this.reStart();
     }
   }
   checkWinnerDiagnally() {
@@ -81,20 +51,18 @@ class App extends React.Component {
     let third = [this.state.squares[2],this.state.squares[5],this.state.squares[8]];
     if(first.join('') === "AAA" || second.join('') === "AAA" || third.join('') === "AAA") {
       alert("A win!!");
-     // this.reStart();
     } else if(first.join('') === "BBB" || second.join('') === "BBB" || third.join('') === "BBB") {
       alert("B win!");
-     // this.reStart();
     }
   }
   handleTurnChange(val) {
-    let next = '';
     if(this.state.turn === 'A') {
       this.setState({turn:"B"});
     } else {
       this.setState({turn:"A"});
     }
   }
+
   updateSquares(i) {
     let newArr = this.state.squares.slice(0);
     if(this.state.turn === 'A') {
