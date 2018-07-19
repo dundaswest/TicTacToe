@@ -1,0 +1,28 @@
+.row {
+  height: 90%;
+  width:90%;
+
+}
+
+.col {
+  background-color: #4e709d;
+  height: 200px;
+  width: 30%;
+  border-style: solid;
+  float:left;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 3rem;
+}
+
+.square {
+  border-style: solid;
+  background-color: #4e709d;
+  float:left;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+.clear {
+  clear: both;
+}

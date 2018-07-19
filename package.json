@@ -1,0 +1,35 @@
+{
+  "name": "challenge_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -d --watch",
+    "start": "nodemon server.js"
+  },
+  "author": "Jamie",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "chart.js": "^2.7.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "express": "^4.16.3",
+    "i": "^0.3.6",
+    "install": "^0.12.1",
+    "nodemon": "^1.18.1",
+    "npm": "^6.1.0",
+    "pondjs": "^1.0.0-alpha.0",
+    "react-chartjs-2": "^2.7.2",
+    "react-timeseries-charts": "^0.15.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-loader": "^2.0.0"
+  }
+}
